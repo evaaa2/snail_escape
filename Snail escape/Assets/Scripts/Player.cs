@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
+        //the snail should not jump
+        moveY = 0;
 
         transform.position += new Vector3(moveX, moveY, 0f) * speed * Time.deltaTime;
     }
